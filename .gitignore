@@ -148,6 +148,9 @@ $RECYCLE.BIN/
 [Bb]in/
 [Oo]bj/
 
+bin/
+bin-int/
+
 # mstest test results
 TestResults
 
@@ -181,6 +184,7 @@ x64/
 *.vspscc
 *.vssscc
 .builds
+.vs/
 
 # Visual C++ cache files
 ipch/

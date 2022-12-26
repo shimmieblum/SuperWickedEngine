@@ -147,8 +147,8 @@ $RECYCLE.BIN/
 [Bb]in/
 [Oo]bj/
 
-bin/
-bin-int/
+../bin/
+../bin-int/
 
 # mstest test results
 TestResults

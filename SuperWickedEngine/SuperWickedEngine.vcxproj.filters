@@ -16,9 +16,15 @@
     <ClInclude Include="src\SuperWickedEngine\EntryPoint.h">
       <Filter>SuperWickedEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\SuperWickedEngine\Log.h">
+      <Filter>SuperWickedEngine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SuperWickedEngine\Application.cpp">
+      <Filter>SuperWickedEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SuperWickedEngine\Log.cpp">
       <Filter>SuperWickedEngine</Filter>
     </ClCompile>
   </ItemGroup>

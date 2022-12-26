@@ -146,9 +146,8 @@ $RECYCLE.BIN/
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
 [Oo]bj/
+[Bb]in-int/
 
-../bin/
-../bin-int/
 
 # mstest test results
 TestResults

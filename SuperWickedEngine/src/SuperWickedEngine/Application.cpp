@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-namespace swe
+namespace SuperWickedEngine
 {
      Application::Application()
      = default;
@@ -14,7 +14,6 @@ namespace swe
      {
          while (true)
          {
-              
          }
      }
 }

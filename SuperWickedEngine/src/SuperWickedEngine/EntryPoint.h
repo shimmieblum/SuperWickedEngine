@@ -1,13 +1,22 @@
 #pragma once
-#include "../SuperWickedEngine.h"
+#include "Log.h"
 
 # ifdef SWE_PLATFORM_WINDOWS
 
-extern swe::Application* swe::CreateApplication();
+namespace SuperWickedEngine
+{
+    class Log;
+}
+
+extern SuperWickedEngine::Application* SuperWickedEngine::CreateApplication();
 
 int main(int argc, char** argv)
 {
-    auto app = swe::CreateApplication();
+    SuperWickedEngine::Log::Init();
+    SWE_CORE_WARN("Logging Started");
+    SWE_INFO("Welcome to the SuperWickedEngine Logger");
+    
+    auto app = SuperWickedEngine::CreateApplication();
     app->run();
     delete app;
 }

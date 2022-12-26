@@ -2,7 +2,7 @@
 #include "Core.h"
 
 
-namespace swe
+namespace SuperWickedEngine
 {
     
     class  SWE_API Application

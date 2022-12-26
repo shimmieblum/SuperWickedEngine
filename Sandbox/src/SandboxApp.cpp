@@ -1,16 +1,17 @@
 ﻿#include "SuperWickedEngine.h"
 
-class Sandbox : public swe::Application
+class Sandbox : public SuperWickedEngine::Application
 {
 public:
     Sandbox()
-    { }
+    {
+    }
 
     ~Sandbox()
     { }
 };
 
-swe::Application* swe::CreateApplication()
+SuperWickedEngine::Application* SuperWickedEngine::CreateApplication()
 {
     return new Sandbox();
 }

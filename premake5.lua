@@ -14,8 +14,8 @@ project "SuperWickedEngine"
     kind "SharedLib"
     language "C++"
 
-    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
     files
     {
@@ -36,13 +36,13 @@ project "SuperWickedEngine"
         defines
         {
             "SWE_PLATFORM_WINDOWS",
-            "SWE_BUILD_DLL",
-            "_WINDLL"
+            "SWE_BUILD_DLL"
         }
 
         postbuildcommands
         {
             ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+
         }
     
     filter "configurations:Debug"
@@ -84,9 +84,7 @@ project "Sandbox"
 
         defines
         {
-            "SWE_PLATFORM_WINDOWS",
-            "SWE_BUILD_DLL",
-            "_WINDLL"
+            "SWE_PLATFORM_WINDOWS"
         }
     
     links

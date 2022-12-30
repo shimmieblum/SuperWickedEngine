@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
+
 namespace SuperWickedEngine
 {
     class SWE_API Log

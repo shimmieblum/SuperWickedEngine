@@ -8,3 +8,5 @@ followed his guidance and teachings.
 This is a learning project for me to learn about c++ and building game engines. 
 
 See here for the original [repo](https://github.com/TheCherno/Hazel)
+
+test protections

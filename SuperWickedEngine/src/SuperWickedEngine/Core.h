@@ -10,9 +10,4 @@
     #error SuperWickedEngine only works on windows
 #endif
 
-
-class Core
-{
-public:
-    
-};
+#define BIT(x) (1 << (x)) // bitfield

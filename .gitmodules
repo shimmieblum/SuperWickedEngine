@@ -1,6 +1,6 @@
 [submodule "SuperWickedEngine/vendor/spdlog"]
 	path = SuperWickedEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule ".\\SuperWickedEngine\\vendor\\glfw"]
-	path = SuperWickedEngine/vendor/glfw
-	url = https://github.com/shimmieblum/glfw
+[submodule "SuperWickedEngine/vendor/GLFW"]
+	path = SuperWickedEngine/vendor/GLFW
+	url = https://github.com/thecherno/glfw

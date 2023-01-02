@@ -17,7 +17,7 @@ int main(int argc, char** argv)
     SWE_INFO("Welcome to the SuperWickedEngine Logger");
     
     auto app = SuperWickedEngine::CreateApplication();
-    app->run();
+    app->Run();
     delete app;
 }
 

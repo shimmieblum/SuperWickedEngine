@@ -34,11 +34,15 @@ namespace SuperWickedEngine
         {
             int success = glfwInit();
             SWE_CORE_ASSERT(success, "Couldn't initialize GLFW")
-            // not sure about next line...
             s_GLFWInitialized = true;
         }
 
-        m_Window = glfwCreateWindow(static_cast<int>(props.Width), static_cast<int>(props.Height), m_Data.Title.c_str(), nullptr, nullptr);
+        m_Window = glfwCreateWindow(
+            static_cast<int>(props.Width),
+            static_cast<int>(props.Height),
+            m_Data.Title.c_str(),
+            nullptr,
+            nullptr);
         glfwMakeContextCurrent(m_Window);
         glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);

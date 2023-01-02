@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Core.h"
+#include "Window.h"
 
 
 namespace SuperWickedEngine
@@ -11,10 +12,15 @@ namespace SuperWickedEngine
     public:
         Application();
         virtual ~Application();
-        void run();
+        void Run() const;
+
+    private:
+        std::unique_ptr<Window> m_Window;
+        bool m_Running = true;
+
     };
 
-
+    
     // To Be Defined in client
     Application* CreateApplication();
 }

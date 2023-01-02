@@ -17,6 +17,9 @@ project "SuperWickedEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "swepch.h"
+    pchsource "SuperWickedEngine/src/swepch.cpp"
+    
     files
     {
         "%{prj.name}/src/**.h",

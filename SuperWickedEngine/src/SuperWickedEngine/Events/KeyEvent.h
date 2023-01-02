@@ -1,5 +1,4 @@
 ﻿#pragma once
-#include <sstream>
 
 #include "SuperWickedEngine/Events/Event.h"
 #include "../EntryPoint.h"

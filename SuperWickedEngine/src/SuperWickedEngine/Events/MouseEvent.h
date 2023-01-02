@@ -1,7 +1,4 @@
 ﻿#pragma once
-#include <string>
-#include <functional>
-#include <sstream>
 
 #include "Event.h"
 

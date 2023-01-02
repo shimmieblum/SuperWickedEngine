@@ -1,6 +1,7 @@
-﻿#include "Application.h"
+﻿#include "swepch.h"
 
-#include <iostream>
+#include "Application.h"
+
 
 namespace SuperWickedEngine
 {

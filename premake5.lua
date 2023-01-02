@@ -11,9 +11,9 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- include directories relative to root folder
 IncludeDir = {}
-IncludeDir["GLFW"] = "SuperWickedEngine/vendor/glfw/include"
+IncludeDir["GLFW"] = "SuperWickedEngine/vendor/GLFW/include"
 
-include "SuperWickedEngine/vendor/glfw"
+include "SuperWickedEngine/vendor/GLFW"
 
 
 project "SuperWickedEngine"
@@ -42,7 +42,7 @@ project "SuperWickedEngine"
 
     links
     {
-        "glfw",
+        "GLFW",
         "opengl32.lib"
     }
 

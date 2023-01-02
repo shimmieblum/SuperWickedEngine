@@ -6,14 +6,18 @@
 namespace SuperWickedEngine
 {
      Application::Application()
-     = default;
-
-     Application::~Application()
-     = default;
-
-     void Application::run()
      {
-         while (true);
+         m_Window = std::unique_ptr<Window>(Window::Create());
+     }
+
+     Application::~Application() = default;
+
+     void Application::Run() const
+     {
+         while(m_Running)
+         {
+             m_Window->OnUpdate();
+         }
+        
      }
 }
-  

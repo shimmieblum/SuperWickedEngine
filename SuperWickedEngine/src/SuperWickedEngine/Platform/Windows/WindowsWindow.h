@@ -36,7 +36,7 @@ namespace SuperWickedEngine
             EventCallbackFn EventCallback;
         };
 
-        WindowData m_Data;; 
+        WindowData m_Data; 
     };
 
     

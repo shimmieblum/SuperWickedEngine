@@ -1,7 +1,5 @@
 ﻿#pragma once
 #include "Events/Event.h"
-#include "Platform/Windows/WindowsWindow.h"
-#include "Platform/Windows/WindowsWindow.h"
 
 namespace SuperWickedEngine
 {

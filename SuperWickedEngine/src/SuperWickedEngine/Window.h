@@ -1,6 +1,5 @@
 ﻿#pragma once
 
-#pragma once
 #include "Events/Event.h"
 
 namespace SuperWickedEngine

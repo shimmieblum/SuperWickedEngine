@@ -29,14 +29,14 @@ namespace SuperWickedEngine
         m_Data.Width = props.Width;
         
         SWE_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
-        
+
         if (!s_GLFWInitialized)
         {
             int success = glfwInit();
             SWE_CORE_ASSERT(success, "Couldn't initialize GLFW")
             s_GLFWInitialized = true;
         }
-        
+
         m_Window = glfwCreateWindow(
             static_cast<int>(props.Width),
             static_cast<int>(props.Height),

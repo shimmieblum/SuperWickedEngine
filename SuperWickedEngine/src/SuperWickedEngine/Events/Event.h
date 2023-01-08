@@ -1,11 +1,11 @@
 ﻿#pragma once
 #include "../Core.h"
-
+#include "swepch.h"
 
 namespace SuperWickedEngine
 {
     // currently using blocking events rather than buffered events
-    // this is easier to implement but may be improved in the future
+    // this is easier to implement but may be improved in the futured
     enum class EventType
     {
         None = 0,

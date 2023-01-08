@@ -9,6 +9,13 @@
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- include directories relative to root folder
+IncludeDir = {}
+IncludeDir["GLFW"] = "SuperWickedEngine/vendor/GLFW/include"
+
+include "SuperWickedEngine/vendor/GLFW"
+
+
 project "SuperWickedEngine"
     location "SuperWickedEngine"
     kind "SharedLib"
@@ -29,7 +36,14 @@ project "SuperWickedEngine"
     includedirs
     {
         "%{prj.name}/vendor/spdlog/include",
-        "%{prj.name}/src"
+        "%{prj.name}/src",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows" 

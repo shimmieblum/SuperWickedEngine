@@ -1,7 +1,6 @@
 ﻿#pragma once
 
 #include "SuperWickedEngine/Events/Event.h"
-#include "../EntryPoint.h"
 
 namespace SuperWickedEngine
 {

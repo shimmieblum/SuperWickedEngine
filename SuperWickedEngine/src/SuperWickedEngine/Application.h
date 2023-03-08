@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "Core.h"
 #include "Window.h"
+#include "Events/ApplicationEvent.h"
 
 
 namespace SuperWickedEngine
@@ -18,9 +19,10 @@ namespace SuperWickedEngine
     private:
         std::unique_ptr<Window> m_Window;
         bool m_Running = true;
+        bool OnWindowClose(WindowCloseEvent& e);
+
 
     };
-
     
     // To Be Defined in client
     Application* CreateApplication();

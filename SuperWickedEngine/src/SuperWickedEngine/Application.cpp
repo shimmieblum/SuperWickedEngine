@@ -19,7 +19,16 @@ namespace SuperWickedEngine
 
     void Application::OnEvent(Event& e)
     {
-        SWE_CORE_INFO("{0}", e);
+        EventDispatcher dispatcher(e);
+        dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
+        
+        SWE_CORE_TRACE("{0}", e);
+    }
+
+    bool Application::OnWindowClose(WindowCloseEvent& e)
+    {
+        m_Running = false;
+       return true;
     }
 
      void Application::Run() const

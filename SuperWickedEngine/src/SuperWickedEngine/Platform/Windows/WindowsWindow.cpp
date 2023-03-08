@@ -10,6 +10,11 @@ namespace SuperWickedEngine
 {
     static bool s_GLFWInitialized = false;
 
+    static void s_GLFWErrorCallback(int error, const char* description)
+    {
+        SWE_CORE_ERROR("GLFW Error ({0}) - {1}", error, description);
+    }
+
     Window* Window::Create(const WindowProps& props)
     {
         return new WindowsWindow(props);
@@ -36,7 +41,8 @@ namespace SuperWickedEngine
         if (!s_GLFWInitialized)
         {
             int success = glfwInit();
-            SWE_CORE_ASSERT(success, "Couldn't initialize GLFW")
+            SWE_CORE_ASSERT(success, "Couldn't initialize GLFW");
+            glfwSetErrorCallback(s_GLFWErrorCallback);
             s_GLFWInitialized = true;
         }
 

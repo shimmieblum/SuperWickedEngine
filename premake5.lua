@@ -112,14 +112,17 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "SWE_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
     
     filter "configurations:Release"
         defines "SWE_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "SWE_DIST"
+        buildoptions "/MD"
         optimize "On"
 
     

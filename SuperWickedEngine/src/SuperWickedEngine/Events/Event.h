@@ -35,6 +35,11 @@ namespace SuperWickedEngine
     {
         friend class EventDispatcher;
     public:
+
+        virtual ~Event() = default;
+
+        bool Handled = false;
+        
         [[nodiscard]]
         virtual EventType GetEventType() const = 0;
         [[nodiscard]]
@@ -48,8 +53,6 @@ namespace SuperWickedEngine
         {
             return  GetCategoryFlags() & category;
         }
-    protected:
-        bool m_Handled = false;
     };
 
     class EventDispatcher
@@ -64,7 +67,7 @@ namespace SuperWickedEngine
         {
             if(m_Event.GetEventType() == T::GetStaticType())
             {
-                m_Event.m_Handled = func(*static_cast<T*>(&m_Event));
+                m_Event.Handled = func(*static_cast<T*>(&m_Event));
                 return true;
             }
             return false;

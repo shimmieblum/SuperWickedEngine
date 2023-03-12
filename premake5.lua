@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- include directories relative to root folder
 IncludeDir = {}
 IncludeDir["GLFW"] = "SuperWickedEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "SuperWickedEngine/vendor/Glad/include"
 
 include "SuperWickedEngine/vendor/GLFW"
+include "SuperWickedEngine/vendor/Glad"
 
 
 project "SuperWickedEngine"
@@ -37,12 +39,15 @@ project "SuperWickedEngine"
     {
         "%{prj.name}/vendor/spdlog/include",
         "%{prj.name}/src",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
+        
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -54,7 +59,8 @@ project "SuperWickedEngine"
         defines
         {
             "SWE_PLATFORM_WINDOWS",
-            "SWE_BUILD_DLL"
+            "SWE_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands

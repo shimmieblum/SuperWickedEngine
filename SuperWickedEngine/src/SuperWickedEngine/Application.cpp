@@ -23,9 +23,9 @@ namespace SuperWickedEngine
         dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
         
         SWE_CORE_TRACE("{0}", e);
-        for(auto it = m_LayerStack.end() - 1; it != m_LayerStack.begin();--it)
+        for(auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
         {
-            (*it)->OnEvent(e);
+            (--*it)->OnEvent(e);
             if (e.Handled)
                 break;
         }

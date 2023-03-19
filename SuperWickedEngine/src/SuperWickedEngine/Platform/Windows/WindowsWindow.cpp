@@ -6,6 +6,9 @@
 #include "SuperWickedEngine/Events/KeyEvent.h"
 #include "SuperWickedEngine/Events/MouseEvent.h"
 
+#include "glad/glad.h"
+
+
 namespace SuperWickedEngine
 {
     static bool s_GLFWInitialized = false;
@@ -53,6 +56,8 @@ namespace SuperWickedEngine
             nullptr,
             nullptr);
         glfwMakeContextCurrent(m_Window);
+        int status = gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress));
+        SWE_CORE_ASSERT(status, "Failed to initialize Glad");
         glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);
 
